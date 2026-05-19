@@ -1,0 +1,54 @@
+Table school{
+  school_id char [pk]
+  schoolName varchar [unique]
+  deanName verchar
+  contactNumber int
+} 
+
+Table major {
+  major_id char [pk]
+  majorName varchar 
+  duration_year int
+  school_id char
+}
+
+Table student {
+  student_id char [pk]
+  student_name varchar
+  Gender varchar[1]
+  birth_date date
+  enrollment_year year
+  major_id char
+}
+
+Table instructor{
+  instructor_id char [pk]
+  instructor_name varchar
+  instrcutor_gender varchar[1]
+  instructor_tittle varchar
+  school_id int 
+}
+
+Table course{
+  course_id char [pk]
+  course_name varchar
+  creadits int
+  course_type varchar
+}
+
+table sections{
+  section_id int [pk]
+  semester varchar
+  classroom_location int
+  class_time varchar 
+  enrollment_capacity int
+  course_id char
+}
+
+table enrolment{
+  regular_grade int []
+  final_exam_grade grade 
+  overall_grade grade
+  student_id char
+  section_id int
+}
